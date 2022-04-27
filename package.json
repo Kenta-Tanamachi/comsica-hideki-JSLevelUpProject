@@ -1,0 +1,16 @@
+{
+  "name": "comsica-hideki-JSLevelUpProject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Kenta-Tanamachi/comsica-hideki-JSLevelUpProject.git",
+  "author": "Kenta Tanamachi <kenta.drs.work@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^16.11.4",
+    "axios": "^0.24.0",
+    "forever": "^4.0.1",
+    "node-cron": "^3.0.0",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  }
+}
