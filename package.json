@@ -5,6 +5,9 @@
   "repository": "git@github.com:Kenta-Tanamachi/comsica-hideki-JSLevelUpProject.git",
   "author": "Kenta Tanamachi <kenta.drs.work@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "ts-node ts/index.ts"
+  },
   "dependencies": {
     "@types/node": "^16.11.4",
     "axios": "^0.24.0",
