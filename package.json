@@ -6,7 +6,8 @@
   "author": "Kenta Tanamachi <kenta.drs.work@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node ts/index.ts"
+    "start": "ts-node ts/index.ts",
+    "task": "ts-node task/promiseTest.ts"
   },
   "dependencies": {
     "@types/node": "^16.11.4",

@@ -8,3 +8,12 @@ export const getRandomNumber = (): number => {
   }
   return num;
 };
+
+export const timeLoop = async (): Promise<string> => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const text: string = '終了';
+      resolve(text);
+    }, 3000);
+  });
+};
