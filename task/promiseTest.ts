@@ -5,9 +5,8 @@ const promiseTest = (): void => {
   console.log('promiseTest実行');
 
   // 関数
-  const res: any = timeLoop();
+  timeLoop().then((res) => console.log(res));
   console.log('結果');
-  console.log(res);
 
   return;
 };
