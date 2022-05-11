@@ -1,34 +1,34 @@
 'use strict';
 
-const complete = 'ズン,ズン,ズン,ズン,ドコ';
-const response = 'キ・ヨ・シ！';
+const completeItem = 'ズン,ズン,ズン,ズン,ドコ';
+const responseItem = 'キ・ヨ・シ！';
 
-let flag = true;
-let jointArray = '';
-let array = [];
+let isRepeat = true;
+let jointRandomItems = '';
+let randomItemArray = [];
 
-const random = () => {
-  while (flag) {
+const CreateRandomItems = () => {
+  while (isRepeat) {
     for (let i = 0; i < 5; i++) {
       const items = ['ズン', 'ドコ'];
       const getRandom = Math.floor(Math.random() * items.length);
-      const randomItem = items[getRandom];
-      array.push(randomItem);
+      const randomItems = items[getRandom];
+      randomItemArray.push(randomItems);
     }
 
-    jointArray = array.join(',');
+    jointRandomItems = randomItemArray.join(',');
 
-    if (jointArray === complete) {
-      console.log(jointArray);
-      console.log(response);
-      flag = false;
+    if (jointRandomItems === completeItem) {
+      console.log(jointRandomItems);
+      console.log(responseItem);
+      isRepeat = false;
     } else {
-      console.log(jointArray);
+      console.log(jointRandomItems);
     }
 
-    array = [];
-    jointArray = '';
+    randomItemArray = [];
+    jointRandomItems = '';
   }
 };
 
-random();
+CreateRandomItems();
