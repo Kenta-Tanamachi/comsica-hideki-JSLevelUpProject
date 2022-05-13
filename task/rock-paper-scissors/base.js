@@ -1,48 +1,55 @@
 'use strict';
 
-const rock = document.getElementById('rock');
-const scissors = document.getElementById('scissors');
-const paper = document.getElementById('paper');
-const opponentsHand = document.getElementById('opponentsHand');
+const partnerHandItem = document.getElementById('partnerHandItem');
 const result = document.getElementById('result');
 
-const items = ['グー', 'チョキ', 'パー'];
+const handItems = ['グー', 'チョキ', 'パー'];
 
-rock.onclick = () => {
-  const janKen = Math.floor(Math.random() * items.length);
-  opponentsHand.innerHTML = items[janKen];
-
-  if (items[janKen] === 'グー') {
-    result.innerHTML = '引き分け';
-  } else if (items[janKen] === 'チョキ') {
-    result.innerHTML = '勝ち';
-  } else if (items[janKen] === 'パー') {
-    result.innerHTML = '負け';
-  }
+const resultItems = {
+  win: '勝ち',
+  lose: '負け',
+  draw: '引き分け',
 };
 
-scissors.onclick = () => {
-  const janKen = Math.floor(Math.random() * items.length);
-  opponentsHand.innerHTML = items[janKen];
-
-  if (items[janKen] === 'グー') {
-    result.innerHTML = '負け';
-  } else if (items[janKen] === 'チョキ') {
-    result.innerHTML = '引き分け';
-  } else if (items[janKen] === 'パー') {
-    result.innerHTML = '勝ち';
-  }
+const JanKenFunc = () => {
+  const getRandomHandItem = Math.floor(Math.random() * handItems.length);
+  partnerHandItem.innerHTML = handItems[getRandomHandItem];
 };
 
-paper.onclick = () => {
-  const janKen = Math.floor(Math.random() * items.length);
-  opponentsHand.innerHTML = items[janKen];
+function handleClickRock() {
+  JanKenFunc();
 
-  if (items[janKen] === 'グー') {
-    result.innerHTML = '勝ち';
-  } else if (items[janKen] === 'チョキ') {
-    result.innerHTML = '負け';
-  } else if (items[janKen] === 'パー') {
-    result.innerHTML = '引き分け';
+  if (handItems[getRandomHandItem] === 'グー') {
+    result.innerHTML = resultItems.draw;
+  } else if (handItems[getRandomHandItem] === 'チョキ') {
+    result.innerHTML = resultItems.win;
+  } else if (handItems[getRandomHandItem] === 'パー') {
+    result.innerHTML = resultItems.lose;
   }
-};
+}
+
+function handleClickScissors() {
+  const getRandomHandItem = Math.floor(Math.random() * handItems.length);
+  partnerHandItem.innerHTML = handItems[getRandomHandItem];
+
+  if (handItems[getRandomHandItem] === 'グー') {
+    result.innerHTML = resultItems.lose;
+  } else if (handItems[getRandomHandItem] === 'チョキ') {
+    result.innerHTML = resultItems.draw;
+  } else if (handItems[getRandomHandItem] === 'パー') {
+    result.innerHTML = resultItems.win;
+  }
+}
+
+function handleClickPaper() {
+  const getRandomHandItem = Math.floor(Math.random() * handItems.length);
+  partnerHandItem.innerHTML = handItems[getRandomHandItem];
+
+  if (handItems[getRandomHandItem] === 'グー') {
+    result.innerHTML = resultItems.win;
+  } else if (handItems[getRandomHandItem] === 'チョキ') {
+    result.innerHTML = resultItems.lose;
+  } else if (handItems[getRandomHandItem] === 'パー') {
+    result.innerHTML = resultItems.draw;
+  }
+}

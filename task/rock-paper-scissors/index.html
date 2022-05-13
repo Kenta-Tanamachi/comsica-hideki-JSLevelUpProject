@@ -7,11 +7,13 @@
     <title>Document</title>
   </head>
   <body>
-    <h1 id="opponentsHand"></h1>
+    <h1 id="partnerHandItem"></h1>
     <p>対戦結果：<span id="result"></span></p>
-    <button id="rock" value="グー">グー</button>
-    <button id="scissors" value="チョキ">チョキ</button>
-    <button id="paper" value="パー">パー</button>
+    <button id="rock" value="グー" onClick="handleClickRock()">グー</button>
+    <button id="scissors" value="チョキ" onClick="handleClickScissors()">
+      チョキ
+    </button>
+    <button id="paper" value="パー" onClick="handleClickPaper()">パー</button>
 
     <script src="base.js"></script>
   </body>
