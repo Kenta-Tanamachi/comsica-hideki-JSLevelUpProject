@@ -3,12 +3,12 @@
 const completeItem = 'ズン,ズン,ズン,ズン,ドコ';
 const responseItem = 'キ・ヨ・シ！';
 
-let isRepeat = true;
+let isLoop = true;
 let jointRandomItems = '';
 let randomItemArray = [];
 
 const CreateRandomItems = () => {
-  while (isRepeat) {
+  while (isLoop) {
     for (let i = 0; i < 5; i++) {
       const items = ['ズン', 'ドコ'];
       const getRandom = Math.floor(Math.random() * items.length);
@@ -21,7 +21,7 @@ const CreateRandomItems = () => {
     if (jointRandomItems === completeItem) {
       console.log(jointRandomItems);
       console.log(responseItem);
-      isRepeat = false;
+      isLoop = false;
     } else {
       console.log(jointRandomItems);
     }
