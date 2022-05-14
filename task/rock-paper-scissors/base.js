@@ -11,13 +11,9 @@ const resultItems = {
   draw: '引き分け',
 };
 
-const JanKenFunc = () => {
+function handleClickRock() {
   const getRandomHandItem = Math.floor(Math.random() * handItems.length);
   partnerHandItem.innerHTML = handItems[getRandomHandItem];
-};
-
-function handleClickRock() {
-  JanKenFunc();
 
   if (handItems[getRandomHandItem] === 'グー') {
     result.innerHTML = resultItems.draw;
