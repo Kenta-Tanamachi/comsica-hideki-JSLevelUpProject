@@ -7,7 +7,7 @@ let isLoop = true;
 let jointRandomItems = '';
 let randomItemArray = [];
 
-const CreateRandomItems = () => {
+const createRandomItems = () => {
   while (isLoop) {
     for (let i = 0; i < 5; i++) {
       const items = ['ズン', 'ドコ'];
@@ -31,4 +31,4 @@ const CreateRandomItems = () => {
   }
 };
 
-CreateRandomItems();
+createRandomItems();
