@@ -1,18 +1,13 @@
-import { resolve } from 'path';
 import { timeLoop } from '../ts/util';
 
 // Promiseの基本的な使い方
-const promiseTest = (): void => {
+const promiseTest = async (): Promise<void> => {
   console.log('promiseTest実行');
 
   // 関数
-  const endMessage = async () => {
-    const res: any = await timeLoop();
-    console.log(res);
-  };
-
+  const res: any = await timeLoop();
   console.log('結果');
-  endMessage();
+  console.log(res);
 };
 
 // 実行
