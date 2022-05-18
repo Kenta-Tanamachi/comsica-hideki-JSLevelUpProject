@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "start": "ts-node ts/index.ts",
-    "task": "ts-node task/promiseTest.ts"
+    "task": "ts-node task/promiseTest.ts",
+    "fizzBuzz": "ts-node task/fizzBuzz.js"
   },
   "dependencies": {
     "@types/node": "^16.11.4",
