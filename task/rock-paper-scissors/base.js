@@ -4,24 +4,21 @@ const partnerHandItem = document.getElementById('partnerHandItem');
 const result = document.getElementById('result');
 
 const handItems = ['グー', 'チョキ', 'パー'];
-
-const resultItems = {
-  win: '勝ち',
-  lose: '負け',
-  draw: '引き分け',
-};
+let resultItem = '';
 
 function handleClickRock() {
   const getRandomHandItem = Math.floor(Math.random() * handItems.length);
   partnerHandItem.innerHTML = handItems[getRandomHandItem];
 
   if (handItems[getRandomHandItem] === 'グー') {
-    result.innerHTML = resultItems.draw;
+    resultItem = '引き分け';
   } else if (handItems[getRandomHandItem] === 'チョキ') {
-    result.innerHTML = resultItems.win;
+    resultItem = '勝ち';
   } else if (handItems[getRandomHandItem] === 'パー') {
-    result.innerHTML = resultItems.lose;
+    resultItem = '負け';
   }
+
+  result.innerHTML = resultItem;
 }
 
 function handleClickScissors() {
@@ -29,12 +26,14 @@ function handleClickScissors() {
   partnerHandItem.innerHTML = handItems[getRandomHandItem];
 
   if (handItems[getRandomHandItem] === 'グー') {
-    result.innerHTML = resultItems.lose;
+    resultItem = '負け';
   } else if (handItems[getRandomHandItem] === 'チョキ') {
-    result.innerHTML = resultItems.draw;
+    resultItem = '引き分け';
   } else if (handItems[getRandomHandItem] === 'パー') {
-    result.innerHTML = resultItems.win;
+    resultItem = '勝ち';
   }
+
+  result.innerHTML = resultItem;
 }
 
 function handleClickPaper() {
@@ -42,10 +41,12 @@ function handleClickPaper() {
   partnerHandItem.innerHTML = handItems[getRandomHandItem];
 
   if (handItems[getRandomHandItem] === 'グー') {
-    result.innerHTML = resultItems.win;
+    resultItem = '勝ち';
   } else if (handItems[getRandomHandItem] === 'チョキ') {
-    result.innerHTML = resultItems.lose;
+    resultItem = '負け';
   } else if (handItems[getRandomHandItem] === 'パー') {
-    result.innerHTML = resultItems.draw;
+    resultItem = '引き分け';
   }
+
+  result.innerHTML = resultItem;
 }
