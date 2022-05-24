@@ -2,13 +2,13 @@
 
 const partnerHandItem = document.getElementById('partnerHandItem');
 const result = document.getElementById('result');
-
 const handItems = ['グー', 'チョキ', 'パー'];
-let resultItem = '';
 
 function handleClickRock() {
   const getRandomHandItem = Math.floor(Math.random() * handItems.length);
   partnerHandItem.innerHTML = handItems[getRandomHandItem];
+
+  let resultItem = '';
 
   if (handItems[getRandomHandItem] === 'グー') {
     resultItem = '引き分け';
@@ -25,6 +25,8 @@ function handleClickScissors() {
   const getRandomHandItem = Math.floor(Math.random() * handItems.length);
   partnerHandItem.innerHTML = handItems[getRandomHandItem];
 
+  let resultItem = '';
+
   if (handItems[getRandomHandItem] === 'グー') {
     resultItem = '負け';
   } else if (handItems[getRandomHandItem] === 'チョキ') {
@@ -39,6 +41,8 @@ function handleClickScissors() {
 function handleClickPaper() {
   const getRandomHandItem = Math.floor(Math.random() * handItems.length);
   partnerHandItem.innerHTML = handItems[getRandomHandItem];
+
+  let resultItem = '';
 
   if (handItems[getRandomHandItem] === 'グー') {
     resultItem = '勝ち';
